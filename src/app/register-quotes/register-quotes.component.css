@@ -1,0 +1,21 @@
+.form {
+    padding: 20px;
+}
+
+.row {
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.save-box {
+    display: flex;
+    text-align: center;
+
+    padding: 20px;
+}
