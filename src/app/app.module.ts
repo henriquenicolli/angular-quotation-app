@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ListQuotesComponent } from './list-quotes/list-quotes.component';
 import { RegisterQuotesComponent } from './register-quotes/register-quotes.component';
 import { RegisterProductsComponent } from './register-products/register-products.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
+import {MaterialExampleModule} from './material.module';
 
 
 @NgModule({
@@ -12,10 +19,17 @@ import { RegisterProductsComponent } from './register-products/register-products
     AppComponent,
     ListQuotesComponent,
     RegisterQuotesComponent,
-    RegisterProductsComponent
+    RegisterProductsComponent,
+    SidenavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
