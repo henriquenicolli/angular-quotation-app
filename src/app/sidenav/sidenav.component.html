@@ -1,23 +1,23 @@
 <mat-drawer-container class="example-container" autosize>
-  
+
   <mat-drawer #drawer class="example-sidenav" mode="over">
     <p>Menu</p>
 
     <div class="box-buttons">
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button>
+      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/listaCotacoes">
         Inicio
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button>
+      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/cadastrarCotacao">
         Cadastrar Cotacao
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button>
+      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/cadastrarProduto">
         Cadastrar Produto
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button>
-        Sair
+      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/sair">
+        Sairß
       </button>
     </div>
   </mat-drawer>
@@ -27,14 +27,8 @@
       Abrir Menu
     </button>
 
-    <!-- Listagem de Cotacoes -->
-    <app-list-quotes></app-list-quotes>
+    <router-outlet></router-outlet>
 
-    <!-- Cadastro de Cotacoes -->
-    <app-register-quotes></app-register-quotes>
-
-    <!-- Cadastro de Produtos -->
-    <app-register-products></app-register-products>
   </div>
 
 </mat-drawer-container>
