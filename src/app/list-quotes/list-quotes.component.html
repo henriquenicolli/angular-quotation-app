@@ -11,10 +11,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let quote of quotes">
-                <td>{{quote.companyName}}</td>
-                <td>{{quote.quoteName}}</td>
-                <td>{{quote.quoteExpirationDate}}</td>
+            <tr *ngFor="let quote of quotations">
+                <td>{{quote.observation}}</td>
+                <td>{{quote.description}}</td>
+                <td>{{quote.delivery_date}}</td>
             </tr>
         </tbody>
     </table>

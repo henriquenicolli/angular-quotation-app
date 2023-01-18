@@ -1,0 +1,5 @@
+{
+  "heroesUrl": "http://localhost:10000/v1/quotations/findAll",
+  "textfile": "assets/textfile.txt",
+  "date": "2020-01-29"
+}
