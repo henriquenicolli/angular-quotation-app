@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuotationService } from './quotes.service';
-import { Quotation } from './quotation';
+import { Quotation } from '../service/quotation';
+import { QuotationService } from '../service/quotes.service';
 
 @Component({
   selector: 'app-list-quotes',

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export interface Config {
-  heroesUrl: string;
+  getQuotationURL: string;
+  postQuotationURL: string;
   textfile: string;
   date: any;
 }

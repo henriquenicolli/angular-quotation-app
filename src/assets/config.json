@@ -1,5 +1,6 @@
 {
-  "heroesUrl": "http://localhost:10000/v1/quotations/findAll",
+  "getQuotationURL": "http://localhost:10000/v1/quotations/findAll",
+  "postQuotationURL": "http://localhost:10000/v1/quotations/save",
   "textfile": "assets/textfile.txt",
   "date": "2020-01-29"
 }
