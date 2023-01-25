@@ -4,19 +4,19 @@
     <p>Menu</p>
 
     <div class="box-buttons">
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/listaCotacoes">
+      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/listaCotacoes">
         Inicio
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/cadastrarCotacao">
+      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/cadastrarCotacao">
         Cadastrar Cotacao
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/cadastrarProduto">
+      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/cadastrarProduto">
         Cadastrar Produto
       </button>
 
-      <button class="btn-menu" (click)="showFiller = !showFiller" mat-raised-button routerLink="/sair">
+      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/sair">
         Sair
       </button>
     </div>

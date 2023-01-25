@@ -19,7 +19,16 @@ export class ListQuotesComponent implements OnInit {
 
     getQuotations(): void {
         this.backendService.getQuotations()
-            .subscribe(quotations => (this.quotations = quotations));
+            .subscribe({
+                next: (quotation) => {
+                    this.quotations = quotation
+                },
+                error: (erro) => {
+                    alert("Nao foi possivel conectar no servidor");
+                    console.log(erro)
+                }
+            }
+            );
     }
 
 }

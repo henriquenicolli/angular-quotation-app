@@ -26,13 +26,11 @@ export class BackendService {
 
     /** POST: add a new quotation to the database */
     addQuotation(quotation: Quotation): Observable<Quotation> {
-        console.log("chamando server");
         return this.http.post<Quotation>(postQuotationURL, quotation, httpOptions);
     }
 
     /** POST: add a new product to the database */
     addProduct(product: Product): Observable<Product> {
-        console.log("chamando server");
         return this.http.post<Product>(postProductURL, product, httpOptions);
     }
 

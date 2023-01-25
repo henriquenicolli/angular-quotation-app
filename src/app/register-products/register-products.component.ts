@@ -11,13 +11,27 @@ import { BackendService } from '../service/backend.service';
 export class RegisterProductsComponent {
 
     newProduct: Product = {} as Product;
+    showMsg: boolean = false;
 
     constructor(private backendService: BackendService) { }
 
     addProduct(): void {
         this.backendService
             .addProduct(this.newProduct)
-            .subscribe();
+            .subscribe({
+                next: async () => {
+                    this.showMsg = true;
+                    await delay(1500);
+                    this.showMsg = false;
+                },
+                error: (erro) => {
+                    alert("Nao foi possivel salvar o Produto!");
+                    console.log(erro)
+                }
+            });
     }
+}
 
+function delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

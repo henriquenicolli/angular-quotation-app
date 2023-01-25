@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
     styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent {
-    showFiller = false;
 }
