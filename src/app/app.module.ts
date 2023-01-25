@@ -15,30 +15,30 @@ import { MaterialExampleModule } from './material.module';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'listaCotacoes', component: ListQuotesComponent },
-  { path: 'cadastrarCotacao', component: RegisterQuotesComponent },
-  { path: 'cadastrarProduto', component: RegisterProductsComponent }
+    { path: 'listaCotacoes', component: ListQuotesComponent },
+    { path: 'cadastrarCotacao', component: RegisterQuotesComponent },
+    { path: 'cadastrarProduto', component: RegisterProductsComponent }
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListQuotesComponent,
-    RegisterQuotesComponent,
-    RegisterProductsComponent,
-    SidenavComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatNativeDateModule,
-    HttpClientModule,
-    MaterialExampleModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ListQuotesComponent,
+        RegisterQuotesComponent,
+        RegisterProductsComponent,
+        SidenavComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatNativeDateModule,
+        HttpClientModule,
+        MaterialExampleModule,
+        RouterModule.forRoot(routes)
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

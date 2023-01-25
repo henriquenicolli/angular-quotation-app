@@ -1,24 +1,23 @@
 import { Component } from '@angular/core';
 import { Product } from '../service/product';
-import { QuotationService } from '../service/quotes.service';
+import { BackendService } from '../service/backend.service';
 
 @Component({
-  selector: 'app-register-products',
-  templateUrl: './register-products.component.html',
-  providers: [QuotationService],
-  styleUrls: ['./register-products.component.css']
+    selector: 'app-register-products',
+    templateUrl: './register-products.component.html',
+    providers: [BackendService],
+    styleUrls: ['./register-products.component.css']
 })
 export class RegisterProductsComponent {
 
-  newProduct : Product = {} as Product;
+    newProduct: Product = {} as Product;
 
-  constructor(private quotationService: QuotationService) {}
+    constructor(private backendService: BackendService) { }
 
-  addProduct(): void {
-    console.log("cliquei para salvar");
-    this.quotationService
-      .addProduct(this.newProduct)
-      .subscribe();
-  }
+    addProduct(): void {
+        this.backendService
+            .addProduct(this.newProduct)
+            .subscribe();
+    }
 
 }

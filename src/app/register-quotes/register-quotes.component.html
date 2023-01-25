@@ -3,28 +3,33 @@
 <form class="form">
     <div class="row">
         <div class="col">
-            <input  type="text" class="form-control" placeholder="Nome Cotacao">
+            <input type="text" class="form-control" placeholder="Nome Cotacao">
         </div>
         <div class="col">
-            <input [(ngModel)]="newQuotation.delivery_date" name="delivery" type="text" class="form-control" placeholder="Prazo Entrega">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <input [(ngModel)]="newQuotation.expiration_date" name="expiration" type="text" class="form-control" placeholder="Data Vencimento">
-        </div>
-        <div class="col">
-            <input [(ngModel)]="newQuotation.delivery_value" name="delivery" type="text" class="form-control" placeholder="Frete">
+            <input [(ngModel)]="newQuotation.delivery_date" name="delivery" type="text" class="form-control"
+                placeholder="Prazo Entrega">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <textarea [(ngModel)]="newQuotation.description" name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descricao"></textarea>
+            <input [(ngModel)]="newQuotation.expiration_date" name="expiration" type="text" class="form-control"
+                placeholder="Data Vencimento">
         </div>
         <div class="col">
-            <textarea [(ngModel)]="newQuotation.observation" name="observation" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Observacoes"></textarea>
+            <input [(ngModel)]="newQuotation.delivery_value" name="delivery" type="text" class="form-control"
+                placeholder="Frete">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <textarea [(ngModel)]="newQuotation.description" name="description" class="form-control"
+                id="exampleFormControlTextarea1" rows="3" placeholder="Descricao"></textarea>
+        </div>
+        <div class="col">
+            <textarea [(ngModel)]="newQuotation.observation" name="observation" class="form-control"
+                id="exampleFormControlTextarea1" rows="3" placeholder="Observacoes"></textarea>
         </div>
     </div>
 </form>
