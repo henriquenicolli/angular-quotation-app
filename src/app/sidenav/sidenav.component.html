@@ -1,6 +1,13 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <mat-drawer-container class="example-container" autosize>
+
+  <nav class="navbar navbar-dark bg-dark">
+
+    <button (click)="drawer.toggle()" class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+  </nav>
 
   <mat-drawer #drawer class="example-sidenav" mode="over">
     <p>Menu</p>
@@ -25,10 +32,7 @@
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <button class="btn" (click)="drawer.toggle()"><i class="fa fa-bars"></i> Menu</button>
-
     <router-outlet></router-outlet>
-
   </div>
 
 </mat-drawer-container>
