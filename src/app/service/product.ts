@@ -1,6 +1,7 @@
 export interface Product {
+    productName: string;
     quantity: string;
-    cod_product: string;
+    productCode: string;
     price: string;
     description: string;
 }

@@ -15,7 +15,6 @@ export class RegisterQuotesComponent {
     constructor(private backendService: BackendService) { }
 
     addQuotation(): void {
-        console.log("cliquei para salvar");
         this.backendService
             .addQuotation(this.newQuotation)
             .subscribe();

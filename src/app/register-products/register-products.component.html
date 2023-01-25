@@ -1,43 +1,47 @@
-<h3>Cadastro de Produtos</h3>
-<hr>
-<form class="form">
-    <div class="row">
-        <div class="col">
-            <input [(ngModel)]="newProduct.description" name="description" type="text" class="form-control"
-                placeholder="Nome Produto">
-        </div>
-        <div class="col">
-            <input [(ngModel)]="newProduct.quantity" name="quantity" type="text" class="form-control"
-                placeholder="Quantidade">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <input [(ngModel)]="newProduct.cod_product" name="cod_product" type="text" class="form-control"
-                placeholder="Codigo Fabricacao">
-        </div>
-        <div class="col">
-            <input [(ngModel)]="newProduct.price" name="price" type="text" class="form-control" placeholder="Valor">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descricao"></textarea>
-        </div>
-        <div class="col">
-            <div class="row">
-                <label for="exampleFormControlFile1">Imagem</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+<div class="content">
+    <h3>Cadastro de Produtos</h3>
+    <hr>
+    <form class="form">
+        <div class="row">
+            <div class="col">
+                <input [(ngModel)]="newProduct.productName" name="productName" type="text" class="form-control"
+                    placeholder="Nome Produto">
+            </div>
+            <div class="col">
+                <input [(ngModel)]="newProduct.quantity" name="quantity" type="number" class="form-control"
+                    placeholder="Quantidade">
             </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                <input [(ngModel)]="newProduct.productCode" name="cod_product" type="text" class="form-control"
+                    placeholder="Codigo Fabricacao">
+            </div>
+            <div class="col">
+                <input [(ngModel)]="newProduct.price" name="price" type="number" class="form-control"
+                    placeholder="Valor">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <textarea [(ngModel)]="newProduct.description" name="description" class="form-control"
+                    id="exampleFormControlTextarea1" rows="3" placeholder="Descricao"></textarea>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label for="exampleFormControlFile1">Imagem</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="save-box">
+        <button (click)="addProduct()" type="button" class="btn btn-success btn-lg">Salvar</button>
+        <button type="button" class="btn btn-danger btn-lg">Cancelar</button>
     </div>
-</form>
 
-<div class="save-box">
-    <button (click)="addProduct()" type="button" class="btn btn-success btn-lg">Salvar</button>
-    <button type="button" class="btn btn-danger btn-lg">Cancelar</button>
+    <hr>
 </div>
-
-<hr>

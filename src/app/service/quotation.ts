@@ -1,7 +1,8 @@
 export interface Quotation {
-    expiration_date: string;
-    delivery_date: string;
-    delivery_value: string;
+    quotationName: string;
+    expirationDate: string;
+    deliveryDate: string;
+    deliveryValue: string;
     description: string;
     observation: string;
 }

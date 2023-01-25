@@ -5,16 +5,16 @@
     <table class="table table-striped table-bordered center">
         <thead>
             <tr>
-                <th>Empresa</th>
                 <th>Nome</th>
+                <th>Descricao</th>
                 <th>Data Vencimento</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let quote of quotations">
-                <td>{{quote.observation}}</td>
+                <td>{{quote.quotationName}}</td>
                 <td>{{quote.description}}</td>
-                <td>{{quote.delivery_date}}</td>
+                <td>{{quote.deliveryDate}}</td>
             </tr>
         </tbody>
     </table>
