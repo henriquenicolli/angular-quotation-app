@@ -7,9 +7,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="header-links">
-                <h1> <img width="35px" height="35px" src="../../assets/piggy-bank-svgrepo-com.svg" /> Forte Cotacoes
-                </h1>
+            <div class="logo" routerLink="/mainSidenav/listaCotacoes">
+                <img style="vertical-align:middle" class="center" width="35px" height="35px" src="../../assets/piggy-bank-svgrepo-com.svg" />
+                <span>Forte Cotacoes</span>
             </div>
         </div>
     </nav>
@@ -26,13 +26,15 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-black" (click)="drawer.toggle()" routerLink="/mainSidenav/cadastrarCotacao">
+                <a href="#" class="nav-link text-black" (click)="drawer.toggle()"
+                    routerLink="/mainSidenav/cadastrarCotacao">
                     <img src="../../assets/cotacao.svg" />
                     Cotacoes
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-black" (click)="drawer.toggle()" routerLink="/mainSidenav/cadastrarProduto">
+                <a href="#" class="nav-link text-black" (click)="drawer.toggle()"
+                    routerLink="/mainSidenav/cadastrarProduto">
                     <img src="../../assets/produto.svg" />
                     Produtos
                 </a>

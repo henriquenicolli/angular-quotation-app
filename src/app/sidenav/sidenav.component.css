@@ -18,14 +18,17 @@
 }
 
 .navbar-container {
-    display: flex
+    display: flex;
+    align-items: center;
 }
 
-h1 {
-    color: white;
+.logo {
     margin-left: 15px;
+    color: white;
     font-weight: bold;
+    cursor: pointer;
 }
+
 
 nav {
     background-color: cornflowerblue !important;    
