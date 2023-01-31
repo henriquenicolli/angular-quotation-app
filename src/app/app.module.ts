@@ -13,11 +13,18 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialExampleModule } from './material.module';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
-    { path: 'listaCotacoes', component: ListQuotesComponent },
-    { path: 'cadastrarCotacao', component: RegisterQuotesComponent },
-    { path: 'cadastrarProduto', component: RegisterProductsComponent }
+    { path: 'login', component: LoginPageComponent },
+    {
+        path: 'mainSidenav', component: SidenavComponent, children: [
+            { path: 'listaCotacoes', component: ListQuotesComponent },
+            { path: 'cadastrarCotacao', component: RegisterQuotesComponent },
+            { path: 'cadastrarProduto', component: RegisterProductsComponent }
+        ]
+    }
+
 ];
 
 @NgModule({
@@ -26,7 +33,8 @@ const routes: Routes = [
         ListQuotesComponent,
         RegisterQuotesComponent,
         RegisterProductsComponent,
-        SidenavComponent
+        SidenavComponent,
+        LoginPageComponent
     ],
     imports: [
         BrowserModule,
