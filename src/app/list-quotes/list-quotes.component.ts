@@ -10,6 +10,8 @@ import { BackendService } from '../service/backend.service';
 })
 export class ListQuotesComponent implements OnInit {
     quotations: Quotation[] = [];
+    selectedQuote = {} as Quotation;
+    display = "none";
 
     constructor(private backendService: BackendService) { }
 
@@ -29,6 +31,15 @@ export class ListQuotesComponent implements OnInit {
                 }
             }
             );
+    }
+
+    openModal(quote: Quotation) {
+        this.display = "block";
+        this.selectedQuote = quote;
+    }
+
+    onCloseHandled() {
+        this.display = "none";
     }
 
 }

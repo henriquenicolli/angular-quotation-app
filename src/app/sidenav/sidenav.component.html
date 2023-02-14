@@ -1,34 +1,56 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-drawer-container class="custom-container">
 
-<mat-drawer-container class="example-container" autosize>
+    <nav class="navbar navbar-dark">
+        <div class="navbar-container">
+            <div>
+                <button (click)="drawer.toggle()" class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="logo" routerLink="/mainSidenav/listaCotacoes">
+                <img style="vertical-align:middle" class="center" width="35px" height="35px" src="../../assets/piggy-bank-svgrepo-com.svg" />
+                <span>Forte Cotacoes</span>
+            </div>
+        </div>
+    </nav>
 
-  <mat-drawer #drawer class="example-sidenav" mode="over">
-    <p>Menu</p>
+    <mat-drawer #drawer class="custom-sidenav" mode="over">
+        <p>Menu</p>
 
-    <div class="box-buttons">
-      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/listaCotacoes">
-        Inicio
-      </button>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-black" aria-current="page" (click)="drawer.toggle()"
+                    routerLink="/mainSidenav/listaCotacoes">
+                    <img src="../../assets/home.svg" />
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-black" (click)="drawer.toggle()"
+                    routerLink="/mainSidenav/cadastrarCotacao">
+                    <img src="../../assets/cotacao.svg" />
+                    Cotacoes
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-black" (click)="drawer.toggle()"
+                    routerLink="/mainSidenav/cadastrarProduto">
+                    <img src="../../assets/produto.svg" />
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-black" (click)="drawer.toggle()" routerLink="/login">
+                    <img src="../../assets/sair.svg" />
+                    Sair
+                </a>
+            </li>
+        </ul>
 
-      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/cadastrarCotacao">
-        Cadastrar Cotacao
-      </button>
+    </mat-drawer>
 
-      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/cadastrarProduto">
-        Cadastrar Produto
-      </button>
-
-      <button class="btn-menu" (click)="drawer.toggle()" mat-raised-button routerLink="/sair">
-        Sair
-      </button>
+    <div class="custom-sidenav-content">
+        <router-outlet></router-outlet>
     </div>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button class="btn" (click)="drawer.toggle()"><i class="fa fa-bars"></i> Menu</button>
-
-    <router-outlet></router-outlet>
-
-  </div>
 
 </mat-drawer-container>
