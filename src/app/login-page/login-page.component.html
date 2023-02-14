@@ -16,7 +16,7 @@
                                 <label for="password" class="form-label ">Senha</label>
                                 <input type="password" class="form-control" id="password" placeholder="*******">
                             </div>
-                            <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a>
+                            <p class="small"><a class="text-primary" href="forget-password.html">Esqueceu sua senha?</a>
                             </p>
                             <div class="d-grid">
                                 <button class="btn btn-outline-dark" type="submit"
@@ -25,12 +25,93 @@
                             </div>
                         </form>
                         <div>
-                            <p class="mb-0  text-center">Nao tem uma conta? <a href="signup.html"
-                                    class="text-primary fw-bold">Cadastre-se
+                            <p class="mb-0  text-center">Nao tem uma conta? <a (click)="openModal()"
+                                    class=" text-primary fw-bold">Cadastre-se
                                     agora</a></p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastrar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="onCloseHandled()"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Cpf" aria-label="CPF">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Fone" aria-label="Fone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Cargo" aria-label="Cargo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Empresa</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Empresa">
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Cnpj" aria-label="Cnpj">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Fone" aria-label="Fone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Login</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Login">
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Senha" aria-label="Senha">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Repita a senha"
+                                aria-label="Repita a senha">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    (click)="onCloseHandled()">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="onCloseHandled()">Cadastrar Usuario</button>
             </div>
         </div>
     </div>
