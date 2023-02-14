@@ -9,14 +9,26 @@ import { Component } from '@angular/core';
 })
 export class LoginPageComponent {
 
-    display = "none";
+    displayRegisterForm = "none";
+    displayPasswordRecoveryForm = "none";
+    backgroundDisplay = "block";
 
-    openModal() {
-        this.display = "block";
+    openPasswordRecoveryModal() {
+        this.displayPasswordRecoveryForm = "block";
     }
 
-    onCloseHandled() {
-        this.display = "none";
+    closePasswordRecoveryModal() {
+        this.displayPasswordRecoveryForm = "none";
+    }
+
+    openRegisterFormModal() {
+        this.displayRegisterForm = "block";
+        this.backgroundDisplay = "none";
+    }
+
+    closeRegisterFormModal() {
+        this.displayRegisterForm = "none";
+        this.backgroundDisplay = "block";
     }
 
 }

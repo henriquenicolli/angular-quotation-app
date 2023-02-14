@@ -1,5 +1,5 @@
 <div class="vh-100 d-flex justify-content-center align-items-center">
-    <div class="container">
+    <div class="container" [ngStyle]="{'display':backgroundDisplay}">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="border border-3 border-primary"></div>
@@ -16,7 +16,8 @@
                                 <label for="password" class="form-label ">Senha</label>
                                 <input type="password" class="form-control" id="password" placeholder="*******">
                             </div>
-                            <p class="small"><a class="text-primary" href="forget-password.html">Esqueceu sua senha?</a>
+                            <p class="small"><a class="text-primary" (click)="openPasswordRecoveryModal()">Esqueceu sua
+                                    senha?</a>
                             </p>
                             <div class="d-grid">
                                 <button class="btn btn-outline-dark" type="submit"
@@ -25,7 +26,7 @@
                             </div>
                         </form>
                         <div>
-                            <p class="mb-0  text-center">Nao tem uma conta? <a (click)="openModal()"
+                            <p class="mb-0  text-center">Nao tem uma conta? <a (click)="openRegisterFormModal()"
                                     class=" text-primary fw-bold">Cadastre-se
                                     agora</a></p>
                         </div>
@@ -36,14 +37,42 @@
     </div>
 </div>
 
+<div class="modal" tabindex="-1" aria-labelledby="passwordRecovery" aria-hidden="true"
+    [ngStyle]="{'display':displayPasswordRecoveryForm}">
+    <div class="modal-dialog modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="passwordRecovery">Recuperacao de senha</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="closePasswordRecoveryModal()"></button>
+            </div>
+            <div class="modal-body">
 
-<div class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" [ngStyle]="{'display':display}">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    (click)="closePasswordRecoveryModal()">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="closePasswordRecoveryModal()">Enviar email de
+                    recuperacao</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" aria-labelledby="registerForm" aria-hidden="true"
+    [ngStyle]="{'display':displayRegisterForm}">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cadastrar Usuario</h5>
+                <h5 class="modal-title" id="registerForm">Cadastrar Usuario</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                    (click)="onCloseHandled()"></button>
+                    (click)="closeRegisterFormModal()"></button>
             </div>
             <div class="modal-body">
 
@@ -110,8 +139,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                    (click)="onCloseHandled()">Cancelar</button>
-                <button type="button" class="btn btn-primary" (click)="onCloseHandled()">Cadastrar Usuario</button>
+                    (click)="closeRegisterFormModal()">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="closeRegisterFormModal()">Cadastrar
+                    Usuario</button>
             </div>
         </div>
     </div>
